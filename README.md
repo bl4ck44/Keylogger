@@ -16,7 +16,7 @@ Localoger es un keylogger local que te genera un archivo **.txt** con todas las 
 
 Primero tendremos que ejecutar CMD como administrador y ejecutar el siguiente comando:
 
-```
+```python
 pip install -r requirements.txt
 ```
 
