@@ -1,4 +1,4 @@
-# Localoger
+# Keylogger
 
 <p align="center">
 <img src="./Img/logo.png">
