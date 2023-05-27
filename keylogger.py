@@ -11,9 +11,9 @@ win32gui.ShowWindow(ventana, 0)
 # Configuración de correo electrónico
 smtp_server = "smtp.mail.yahoo.com"
 smtp_port = 587
-sender_email = "fernandachisaguano26@yahoo.com"
-sender_password = "python 444"
-receiver_email = "jhairvascano@yahoo.com"
+sender_email = ""
+sender_password = ""
+receiver_email = ""
 
 def send_email():
     message = MIMEMultipart()
