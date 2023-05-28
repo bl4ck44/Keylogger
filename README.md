@@ -1,34 +1,23 @@
 # Keylogger
 
 <p align="center">
-<img src="./Img/logo.png">
+<img src="Logotipo.png">
 </p>
 
-Localoger es un keylogger local que te genera un archivo **.txt** con todas las palabras registradas
+Un keylogger es una herramienta de software que registra y monitoriza las pulsaciones de teclas realizadas en un dispositivo, sin el conocimiento ni el consentimiento del usuario.
 
-## REQUISISTOS:
+```
+git clone 
 
-* python3
+cd Kelogger
 
-* pip
-
-## USO:
-
-Primero tendremos que ejecutar CMD como administrador y ejecutar el siguiente comando:
-
-```python
 pip install -r requirements.txt
+
+python3 keylogger.py
 ```
 
-Ahora convertiremos el keylogger en un ejecutable **.exe** con pyinstaller:
+<br>
 
-```CMD
-cd C:\Users\%USERNAME%\AppData\Roaming\Python\Python37\Scripts
-
-pyinstaller --onefile LA RUTA DEL ARCHIVO
-```
-
-Ahora iremos a la carpeta **C:\Users\%USERNAME%\AppData\Roaming\Python\Python37\Scripts**
-y buscaremos dos carpeta con el nombre dist y build en dist esta nuestro ejecutable, lo ejecutamos.
-
-Para finalizar el keylogger CTRL + C y ya tendremos nuestro archivo **.txt** en la carpeta dist.
+<p align="center">
+<img src="Img/muestra.gif">
+</p>

