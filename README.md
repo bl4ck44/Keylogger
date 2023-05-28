@@ -19,7 +19,7 @@ sudo chmod +x setup.sh
 
 setup.sh
 
-python3 keylogger.py
+python3 menu.py
 ```
 
 <br>
