@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 sudo chmod +x setup.sh
 
-setup.sh
+bashd setup.sh
 
 python3 menu.py
 ```
