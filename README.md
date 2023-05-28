@@ -17,6 +17,8 @@ pip install -r requirements.txt
 
 sudo chmod +x setup.sh
 
+setup.sh
+
 python3 keylogger.py
 ```
 
