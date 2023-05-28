@@ -46,7 +46,7 @@ if __name__ == "__main__":
         if opcion == "2":
             os.system("git clone https://github.com/brentvollebregt/auto-py-to-exe.git")
             os.system("cd auto-py-to-exe")
-            os.system("sudo python python setup.py install")
+            os.system("sudo python setup.py install")
             os.system("sudo rm -r auto-py-to-exe")
 
         if opcion == "3":
