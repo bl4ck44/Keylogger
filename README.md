@@ -11,9 +11,11 @@ sudo apt-get update && sudo apt install -y python3-pip xclip lolcat figlet && py
 
 git clone https://github.com/bl4ck44/Keylogger.git
 
-cd Kelogger
+cd Keylogger
 
 pip install -r requirements.txt
+
+sudo chmod +x setup.sh
 
 python3 keylogger.py
 ```

