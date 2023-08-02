@@ -23,9 +23,3 @@ python3 menu.py
 <p align="center">
 <img src="Img/muestra1.png">
 </p>
-
-<br>
-
-<p align="center">
-<img src="Img/muestra2.gif">
-</p>
