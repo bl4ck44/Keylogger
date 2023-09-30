@@ -13,7 +13,7 @@ git clone https://github.com/bl4ck44/Keylogger.git
 
 cd Keylogger
 
-pip install -r requirements.txt
+pip install -r requirements.tx
 
 python3 menu.py
 ```
