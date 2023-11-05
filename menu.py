@@ -2,7 +2,7 @@ import os
 
 os.system("clear")
 
-print(""
+print("")
 
 os.system("clear && figlet Keylogger | lolcat")
 
