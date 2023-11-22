@@ -23,3 +23,9 @@ python3 menu.py
 <p align="center">
 <img src="Img/muestra1.png">
 </p>
+
+**NOTA:** Al generar el keylogger remoto hay que configurar el usuario y contraseña en el script.
+
+<p align="center">
+<img src="Img/muestra2.png">
+</p>
